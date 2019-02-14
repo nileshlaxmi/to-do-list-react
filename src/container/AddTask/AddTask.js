@@ -11,10 +11,17 @@ class AddTask extends Component {
             list: []
         }
     }
+
     inputChange = (e) => {
         this.setState({
             task: e.target.value
         })
+    }
+
+    enterKeyEventHandler = (e) => {
+        if(e.key === "Enter"){
+            this.addTask();
+        }
     }
 
     addTask = () => {
@@ -29,7 +36,7 @@ class AddTask extends Component {
         //     task: '',
         //     list: list.push(task)
         // })
-
+        
         this.setState({
             task: '',
             list: [...list, task]
@@ -42,7 +49,7 @@ class AddTask extends Component {
         console.log("typeof(list)", typeof list);
         return(
             <div className="add-task">
-                <input type="text" value={task} onChange={this.inputChange}/>
+                <input type="text" value={task} onChange={this.inputChange} onKeyPress={this.enterKeyEventHandler}/>
                 <button onClick={this.addTask}>Add Task</button>
                 <div className="list-div">
                     <ListItem list={list} />
