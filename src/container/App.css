@@ -1,0 +1,15 @@
+.body-div{
+  position: relative;
+  height: 600px;
+}
+.App {
+  position: absolute;
+  margin: auto;
+  top: 4rem; right: 0; left: 0; 
+  text-align: center;
+  border: 1px solid black;
+  width: 500px;
+  height: 400px;
+}
+
+

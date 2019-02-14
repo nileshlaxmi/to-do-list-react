@@ -1,0 +1,15 @@
+.add-task{
+    margin-top: 10px;
+    padding: 2px;
+}
+
+div input{
+    width: 80%;
+    padding: 3px;
+}
+
+div button{
+    padding: 4px;
+    margin-left: 10px;
+    font-weight: bold;
+}
